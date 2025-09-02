@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from Ecommerce import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', views.shopping_page, name='home'),
     path('',include('Ecommerce.urls'))
 ]
